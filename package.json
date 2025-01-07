@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
+  "scripts": {
+    "lite": "lite-server --port 8080",
+    "start": "npm run lite"
+  },
   "author": "Matteo Brouillette, Madden Leong",
   "license": "MIT",
   "devDependencies": {
