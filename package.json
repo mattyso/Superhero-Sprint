@@ -1,0 +1,13 @@
+{
+    "name": "Superhero-Sprint",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.html",
+    "scripts": {
+      "start": "serve",
+      "build": "sprint as Superhero yay"
+    },
+    "keywords": [],
+    "author": "Matteo Brouillette, Madden Leong",
+    "license": "MIT"
+  }
