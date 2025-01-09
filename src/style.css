@@ -1,7 +1,27 @@
-.body {
+/* remove unnecessary padding */
+body {
     margin: 0px;
+    padding: 0px;
 }
 
+/* scale background to fit device */
 #background {
     width:100%;
+    position: absolute;
+    top:50px;
+}
+
+/* hide scrollbars */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* navbar */
+#navBar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50px;
+    background-color: white;
 }
