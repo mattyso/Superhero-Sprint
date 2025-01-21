@@ -36,17 +36,28 @@ body::-webkit-scrollbar {
     font-size: 0;
 }
 
-#navBar > button {
+#navBar > #popup {
+    top: 100%;
+    width: 50px;
+    height: 25px;
+    background-color: white;
+    border: 0px;
+    border-bottom-right-radius: 12.5px;
+    color: grey;
+    font-weight: bold;
+}
+
+#navBar > #navigation > button {
     width:fit-content;
     height:100%;
     background-color: var(--button-background);
     border: 0px;
 }
 
-#navBar > button:hover {
+#navBar > #navigation > button:hover {
     background-color: var(--button-hover);
 }
 
-#navBar > button:active {
+#navBar > #navigation > button:active {
     background-color: var(--button-click);
 }
