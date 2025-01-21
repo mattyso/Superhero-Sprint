@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero Clicker Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+
+        .game-container {
+            margin-top: 20px; /* Reduced top margin to move everything upward */
+            padding: 20px; /* Add padding for spacing */
+            background-color: white; /* Optional: background color for contrast */
+            border-radius: 10px; /* Optional: rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 5px; /* Reduced spacing below the title */
+        }
+
+        h2 {
+            margin-top: 15px; /* Reduced spacing above each section title */
+        }
+
+        input[type="text"] {
+            margin-bottom: 5px; /* Reduced space below the input field */
+            padding: 10px; /* Padding for better appearance */
+            width: 200px; /* Width of the input */
+            border: 1px solid #ccc; /* Border for the input */
+            border-radius: 5px; /* Rounded corners for the input */
+        }
+
+        button {
+            margin: 5px; /* Space around buttons */
+            padding: 10px 20px; /* Padding for buttons */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners for buttons */
+            background-color: #007BFF; /* Button color */
+            color: white; /* Button text color */
+            cursor: pointer; /* Pointer on hover */
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker color on hover */
+        }
+
+        img {
+            margin: 5px 0; /* Reduced space around the image */
+            width: 150px; /* Fixed width for the image */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        p {
+            margin: 5px 0; /* Space between paragraphs */
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1 id="heroName">Enter Hero Name</h1>
+        
+        <input type="text" id="nameInput" placeholder="Type your hero name here...">
+        <button id="setNameButton">Set Hero Name</button>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5bwKl3JA4X_9BZZ9j-ZFpbvRuRstk67ukMw&s" alt="Superhero">
+
+        <p>Saves: <span id="saveCount">0</span></p>
+        <p>Saves per Interval: 1 per <span id="saveInterval">10</span> seconds</p>
+
+        <h2>Step Shop</h2>
+        <p>Steps: <span id="stepCount">0</span></p>
+        <button id="trainButton">Train (Cost: 10 Steps)</button>
+        <button id="sidekickButton">Get Sidekick (Cost: 100 Steps)</button>
+        <button id="increaseSavesButton">Upgrade Tech (Cost: 20 Steps)</button>
+        
+        <h2>Saves Shop</h2>
+        <button id="unlockSuperpowerButton">Unlock Superpower (Cost: 100 Saves)</button>
+        <div id="superpowerInfo"></div>
+    </div>
+
+    <script src="powerup.js"></script>
+</body>
+</html>

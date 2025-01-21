@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Movement Tracker with Stopwatch</title>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Bangers', Arial, sans-serif; /* Comic-style font */
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            background-image: url('SuperHero Sprint.png'); /* Background image */
+            background-size: cover;                      /* Ensure the image covers the screen */
+            background-repeat: no-repeat;                /* Prevent repeating */
+            background-position: center;                 /* Center the image */
+            height: 100vh;                               /* Full screen height */
+            color: white;                                /* Make text visible over the background */
+        }
+
+        h1, p, button, #data-log {
+            text-shadow: 
+                -1px -1px 0 black, /* Top-left shadow */
+                1px -1px 0 black,  /* Top-right shadow */
+                -1px 1px 0 black,  /* Bottom-left shadow */
+                1px 1px 0 black;   /* Bottom-right shadow */
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-top: 50px;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-shadow: 
+                -1px -1px 0 black, 
+                1px -1px 0 black, 
+                -1px 1px 0 black, 
+                1px 1px 0 black;
+        }
+
+        .back-button:hover {
+            background-color: darkred;
+        }
+
+        .status {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .stopwatch, .step-counter {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+
+        #data-log {
+            margin-top: 20px;
+            font-size: 16px;
+            max-height: 150px;
+            overflow-y: scroll;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+        }
+    </style>
+</head>
+<body>
+    <!-- Back to Base Button -->
+    <button class="back-button" onclick="window.location.href='index.html'">&lt;</button>
+
+    <h1>Super Hero Training</h1>
+    <p class="status" id="status">Waiting for user to move...</p>
+    <p class="stopwatch">Time Elapsed: <span id="stopwatchTime">00:00:00</span></p>
+    <p class="step-counter">Steps Taken: <span id="stepCounter">0</span></p>
+    <button id="startTracking"></button>
+
+    <div id="data-log">
+        <strong>Hero's Motion Data Log:</strong>
+        <ul id="motionDataList"></ul>
+    </div>
+
+    <script src="tyh.js"></script>
+</body>
+</html>
